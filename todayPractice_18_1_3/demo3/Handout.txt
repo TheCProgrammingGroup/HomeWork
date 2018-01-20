@@ -1,0 +1,29 @@
+In this demo we will show you how to organize your code in order to create a big project!!
+
+In this section we will show you how to create a header file which is surrounding by angle brackets.
+
+The angle brackets means this header file is a standard header file which is located in a default area which is /usr/local 
+directory in linux.If you want to use somewhere to put your header file , you need to tell the complier at the compile-time.
+
+So how do we do that?
+
+Use gcc option: -I
+gcc -I (dir where you put the header file) -o main -std=c99 -Wall main.c
+
+You can combine with makefile to leve up this process.
+
+And sometimes we want to archive a bunch of object file to generate a library such as library for math.
+
+The instruction is following:
+
+ar -rcs libmylib.a encrypt.o 
+
+The lib is a prefix and the library name is mylib.
+
+eg:
+
+gcc testcode.c -lmylib -o testcode
+
+Please take care that the -l option shoule follow the source code file.
+
+
